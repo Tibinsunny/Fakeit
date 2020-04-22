@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .wow {
+margin-left: 30%;
+margin-right: 40%;
+}
+td{
+	text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .wow {
+margin-left: 1%;
+}
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" src=/css/style.css >  
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id=output></div>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="#">FakeTheWorld</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Site</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+               
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="wow">
+        
+    
+                <iframe alt="Wait for it"src=""  height="350" width="350"></iframe>
+                <table class="table">
+                    <thead>
+                    
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Name:</td>
+                        <td id="first_name">Tibin Sunny</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>DOB:</td>
+                        <td>20/11</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td > Address</td>
+                        <td id="address_generate" ></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td > City</td>
+                        <td id="city_generate" ></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td > state</td>
+                        <td id="state_generate" ></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td > Postal</td>
+                        <td id="postal_code_generate" ></td>
+                      </tr>
+                     
+                     
+                    </tbody>
+                  </table>
+            </div> 
+           
+        
+          
+        </div>
+ 
+
+
+</div>
+</body>
+<script>
+    var 
+    names=[
+    "Adrian",
+    "Addison",
+	"Adrian",
+	"Aiden",
+	"Ainsley",
+	"Alby",
+	"Alex",
+	"Alexis",
+	"Ali",
+	"Amari",
+	"Andy",
+	"Angel",
+	"Archer",
+	"Ari",
+	"Arya",
+	"Ash",
+	"Ashley",
+	"Aspen",
+	"Aubrey",
+	"August",
+	"Austen",
+	"Avery",
+	"Bailey",
+	"Bay",
+	"Billy",
+	"Blaine",
+	"Blair",
+	"Blake",
+	"Bobbie",
+	"Brady",
+	"Brett",
+	"Brook",
+	"Brooklyn",
+	"Caelan",
+	"Cameron",
+	"Campbell",
+	"Carmen",
+	"Carroll",
+	"Carson",
+	"Casey",
+	"Cassidy",
+	"Celyn",
+	"Charlie",
+	"Chris",
+	"Clay",
+	"Cody",
+	"Corey",
+	"Dakota",
+	"Dale",
+	"Dallas",
+	"Dana",
+	"Dane",
+	"Darrel",
+	"Daryl",
+	"Delta",
+	"Devin",
+	"Devon",
+	"Dorian",
+	"Drew",
+	"Dylan",
+	"Easton",
+	"Eddie",
+	"Eden",
+	"Eli",
+	"Ellery",
+	"Elliott",
+	"Emerson",
+	"Emery",
+	"Erin",
+	"Fabian",
+	"Finley",
+	"Florian",
+	"Flynn",
+	"Frances",
+	"Francis",
+	"Frankie",
+	"Gabriel",
+	"Glenn",
+	"Gray",
+	"Hadley",
+	"Harley",
+	"Harper",
+	"Hayden",
+	"Hero",
+	"Hudson",
+	"Hunter",
+	"Indiana",
+	"Jade",
+	"James",
+	"Jamie",
+	"Jayden",
+	"Jean",
+	"Jesse",
+	"Jessie",
+	"Jordan",
+	"Jules",
+	"Julian",
+	"Justice",
+	"Kaden",
+	"Kadin",
+	"Kai",
+	"Karter",
+	"Keegan",
+	"Kelly",
+	"Kelsey",
+	"Kendall",
+	"Kennedy",
+	"Kerry",
+	"Kyle",
+	"Lake",
+	"Landry",
+	"Lane",
+	"Lee",
+	"Lincoln",
+	"Linden",
+	"Logan",
+	"London",
+	"Lonnie",
+	"Lou",
+	"Lucian",
+	"Lumi",
+	"Mackenzie",
+	"Madison",
+	"Marley",
+	"Mason",
+	"Max",
+	"Maxwell",
+	"Micah",
+	"Monroe",
+	"Montana",
+	"Morgan",
+	"Moriah",
+	"Nevada",
+	"Nico",
+	"Noel",
+	"Oakley",
+	"Ode",
+	"Ore",
+	"Paris",
+	"Parker",
+	"Pat",
+	"Payton",
+	"Perry",
+	"Peyton",
+	"Phoenix",
+	"Piper",
+	"Quinn",
+	"Raphael",
+	"Ray",
+	"Reagan",
+	"Reed",
+	"Reese",
+	"Remy",
+	"Riley",
+	"River",
+	"Roan",
+	"Robin",
+	"Rory",
+	"Roux",
+	"Rowan",
+	"Rudy",
+	"Ryan",
+	"Sage",
+	"Sam",
+	"Samar",
+	"Sawyer",
+	"Scout",
+	"Sean",
+	"Shawn",
+	"Sky",
+	"Skylar",
+	"Spencer",
+	"Stevie",
+	"Sunny",
+	"Sydney",
+	"Tanner",
+	"Tatum",
+	"Taylor",
+	"Terry",
+	"Toby",
+	"Toni",
+	"Tory",
+	"Tru",
+	"Tyler",
+	"Umber",
+	"Unique",
+	"Val",
+	"Vesper",
+	"Wallace",
+	"West",
+	"Winter",
+	"Wyatt",
+	"Wynne",
+	"Xen",
+	"Xoan",
+	"Yael",
+	"Zion",
+    "Gigi",
+    "Johonas",
+    "Juwel"
+];
+var selector=Math.floor(Math.random() * 101);
+var selector2=Math.floor(Math.random() * 101);
+$("#first_name").text(names[selector].concat(" ").concat(names[selector2]))
+var chooser=Math.floor(Math.random()*1000);
+$.getJSON('address.json', function(data){
+   
+var address=data.addresses[chooser].address1;
+var city=data.addresses[chooser].city;
+var state=data.addresses[chooser].state;
+var postal_code=data.addresses[chooser].postalCode;
+$("#address_generate").text(address)
+$("#city_generate").text(city)
+$("#state_generate").text(state)
+$("#postal_code_generate").text(postal_code)
+
+
+});
+
+
+    </script>
+
+    
+    
+</html>
