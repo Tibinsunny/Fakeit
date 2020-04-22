@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    	<link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -11,6 +12,52 @@
     <title>Let's Fake Everything</title>
 </head>
 <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light  bg-lightnew">
+            <a class="navbar-brand" href="#"><font id="head_color" color=black>FakeTheWorld</font></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/"><font id="head_color1" color=black>Home</font> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><font id="head_color2" color=black>About Site</a></font>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><font id="head_color3" color=black>Contact</a></font>
+                    </li>
+               
+                </ul>
+             
+            </div>
+        </nav>
+        
+
+
+
+
+        </div>
 
 </body>
+<script>
+var flag_session= localStorage.getItem("flag");
+
+    if(flag_session==1)
+{
+	$('body').css('background-color','#343a40')
+	$('.bg-lightnew').css('background-color','#343a40')
+	$('.card').addClass('bg-dark')
+	$('.card').css('color','white')
+	$('mode').html('<font color=white>Toggle WhiteMode</font>')
+	$('#head_color').css('color','white')
+	$('#head_color1').css('color','white')
+	$('#head_color2').css('color','white')
+	$('#head_color3').css('color','white')
+}
+
+</script>
 </html>

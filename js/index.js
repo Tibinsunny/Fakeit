@@ -278,3 +278,4 @@ if(flag_session==1)
 	$('#head_color3').css('color','white')
 }
 
+
