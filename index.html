@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <style>
-	
+	body
+	{
+		background-color:white;
+	}
 iframe{
 	justify-content: center;
 }
@@ -10,6 +13,22 @@ iframe{
 {
 	margin-top: 3%;
 }
+.bg-light
+{
+	background-color: white;
+	
+}
+.container
+{
+	color:black;
+}
+
+.card
+{
+	color:black;
+}
+
+
 @media only screen and (max-width: 600px) {
 
 .card
@@ -36,8 +55,8 @@ iframe
 <body>
    
     <div class="container">
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <a class="navbar-brand" href="#">FakeTheWorld</a>
+        <nav class="navbar navbar-expand-sm navbar-light  bg-lightnew">
+            <a class="navbar-brand" href="#"><font id="head_color" color=black>FakeTheWorld</font></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,13 +64,13 @@ iframe
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#"><font id="head_color1" color=black>Home</font> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Site</a>
+                        <a class="nav-link" href="about.html"><font id="head_color2" color=black>About Site</a></font>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html"><font id="head_color3" color=black>Contact</a></font>
                     </li>
                
                 </ul>
@@ -71,16 +90,20 @@ iframe
 		  </div>
 		
         <div class="col-xs-1 text-center">
+			<div class="custom-control custom-switch mb-4">
+				<input type="checkbox" onclick=modechanger() class="custom-control-input" id="customSwitches">
+				<label class="custom-control-label" for="customSwitches"><mode>Toggle DarkMode</mode></label>
+			  </div>
     
-				<iframe alt="Wait for it"src="https://www.thispersondoesnotexist.com/ "  height="350" width="350"></iframe>
+				<iframe alt="Wait for it"src=""  height="350" width="350"></iframe>
 			</div>
 			<div class="row">
 				<div class="col-sm">
 				 
 				</div>
 				<div class="col-sm " >
-				  <div class="card align-items-center">
-					  <img class="card-img-top"   alt="">
+				  <div class="card  align-items-center">
+					 
 					  <div class="card-body">
 						  <h4 id=first_name class="card-title">Title</h4>
 						  <p id=address_generate class="card-text center"></p>
@@ -305,6 +328,7 @@ iframe
     "Johonas",
     "Juwel"
 ];
+var flag=0;
 var selector=Math.floor(Math.random() * 101);
 var selector2=Math.floor(Math.random() * 101);
 $("#first_name").text(names[selector].concat(" ").concat(names[selector2]))
@@ -335,6 +359,54 @@ function reload()
 {
 	window.location.href="index.html"
 }
+
+function modechanger()
+{
+	if(flag==0)
+	{
+	$('body').css('background-color','#343a40')
+	$('.bg-lightnew').css('background-color','#343a40')
+	$('.card').addClass('bg-dark')
+	$('.card').css('color','white')
+	$('mode').html('<font color=white>Toggle WhiteMode</font>')
+	$('#head_color').css('color','white')
+	$('#head_color1').css('color','white')
+	$('#head_color2').css('color','white')
+	$('#head_color3').css('color','white')
+	localStorage.setItem("flag", "1");
+	flag=1
+}else
+{
+	$('body').css('background-color','white')
+	$('.bg-lightnew').css('background-color','white')
+	$('.card').css('color','black')
+	$('mode').html('<font color=black>Toggle DarkMode</font>')
+	$('.card').removeClass('bg-dark')
+	$('#head_color').css('color','black')
+	$('#head_color1').css('color','black')
+	$('#head_color2').css('color','black')
+	$('#head_color3').css('color','black')
+	localStorage.setItem("flag", "0");
+	flag=0
+}
+}
+var flag_session= localStorage.getItem("flag");
+
+if(flag_session==1)
+{
+	$('body').css('background-color','#343a40')
+	$('.bg-lightnew').css('background-color','#343a40')
+	$('.card').addClass('bg-dark')
+	$('.card').css('color','white')
+	$('mode').html('<font color=white>Toggle WhiteMode</font>')
+	$('#head_color').css('color','white')
+	$('#head_color1').css('color','white')
+	$('#head_color2').css('color','white')
+	$('#head_color3').css('color','white')
+}
+
+
+
 
     </script>
 
