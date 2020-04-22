@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
     <style>
-        .wow {
-margin-left: 30%;
-margin-right: 40%;
+	
+iframe{
+	justify-content: center;
 }
-td{
-	text-align: center;
+.col-sm
+{
+	margin-top: 3%;
 }
 @media only screen and (max-width: 600px) {
-    .wow {
-margin-left:1%;
+
+.card
+{
+	margin-left: 12%;
+	margin-right: 12%;
 }
+iframe
+{
+	
 }
 
-
+}
     </style>
     <meta charset="UTF-8">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -23,10 +30,10 @@ margin-left:1%;
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Document</title>
+    <title>Lets Fake Everything</title>
 </head>
 <body>
-    <div id=output></div>
+   
     <div class="container">
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <a class="navbar-brand" href="#">FakeTheWorld</a>
@@ -40,10 +47,10 @@ margin-left:1%;
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Site</a>
+                        <a class="nav-link" href="about.html">About Site</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                
                 </ul>
@@ -52,59 +59,49 @@ margin-left:1%;
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
-        </nav>
-        <div class="wow">
-        
-    
-                <iframe alt="Wait for it"src=""  height="350" width="350"></iframe>
-                <table class="table">
-                    <thead>
-                    
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"></th>
-                        <td>Name:</td>
-                        <td id="first_name">Tibin Sunny</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td>DOB:</td>
-                        <td>20/11</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td > Address</td>
-                        <td id="address_generate" ></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td > City</td>
-                        <td id="city_generate" ></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td > state</td>
-                        <td id="state_generate" ></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td > Postal</td>
-                        <td id="postal_code_generate" ></td>
-                      </tr>
-                     
-                     
-                    </tbody>
-                  </table>
-            </div> 
-           
-        
-          
-        </div>
+		</nav>
+		<div class="row">
+			<div class="col-sm">
+			 
+			</div>
+			<div class="col-sm">
+			
+			</div>
+			<div class="col-sm">
  
-
-
-</div>
+			</div>
+		  </div>
+		
+        <div class="col-xs-1 text-center">
+    
+				<iframe alt="Wait for it"src="https://www.thispersondoesnotexist.com/ "  height="350" width="350"></iframe>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+				 
+				</div>
+				<div class="col-sm " >
+				  <div class="card align-items-center">
+					  <img class="card-img-top"   alt="">
+					  <div class="card-body">
+						  <h4 id=first_name class="card-title">Title</h4>
+						  <p id=address_generate class="card-text center"></p>
+						  <p id=city_generate class="card-text center"></p>
+						  <p id=state_generate class="card-text center"></p>
+						  <p id=radom_mail class="card-text center"></p>
+						  <p id=radom_phone class="card-text center"></p>
+					  </div>
+					 
+				  </div>
+				<center>  <button type="button"   onclick=reload()  class="btn btn-danger mt-2">FakeIt!</button></center>
+				
+				</div>
+				<div class="col-sm ">
+				 
+				</div>
+			  </div>
+		
+			
 </body>
 <script>
     var 
@@ -320,14 +317,26 @@ var address=data.addresses[chooser].address1;
 var city=data.addresses[chooser].city;
 var state=data.addresses[chooser].state;
 var postal_code=data.addresses[chooser].postalCode;
-$("#address_generate").text(address)
-$("#city_generate").text(city)
-$("#state_generate").text(state)
+$("#address_generate").text(address.concat(","))
+$("#city_generate").text(city.concat(","))
+$("#state_generate").text(state.concat(","))
 $("#postal_code_generate").text(postal_code)
 
 
-});
+})
+$.getJSON('https://randomuser.me/api/?format=json', function(data){
 
+	var radom_mail=data.results[0].email
+	var radom_phone=data.results[0].phone
+	var radom_mail=data.results[0].email
+	$("#radom_mail").text(radom_mail)
+	$("#radom_phone").text(radom_phone)
+})
+
+function reload()
+{
+	window.location.href="index.html"
+}
 
     </script>
 
