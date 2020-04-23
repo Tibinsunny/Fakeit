@@ -11,6 +11,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Let's Fake Everything</title>
 </head>
+<style>
+  
+    @media only screen and (min-width: 992px)
+    {
+        .card
+    {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    }
+    </style>
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-sm navbar-light  bg-lightnew">
@@ -36,8 +47,37 @@
             </div>
         </nav>
         
+<center>
+        <div class="col-xs-1 text-center">
+            <div class="card-columns">
+            
+                    </div>
+                </div>
+                <div class="card border-dark mt-5">
+                    <img class="card-img-top" src="holder.js/100x180/" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">What the hell is this?</h4>
+                        <p class="card-text">Hey,This website  will create a complete fake person. Fake means 100% fake.
+                            Usually Faking up an Identity is always a better choice to get rid of Hackers. </p><br><br>
+                            <h4 class="card-title">Why do we need it ?</h4>
+                            <p class="card-text">Here I will surely make an attempt to make all the details including the email and phone number fake but valid.
+                                Currently all the details mentioned in the website is fake and invalid. Within a couple of months I will try my best to come up with an SMTP Server 
+                                So that users can recieve emails on the same email ID :) 
+                            </p>
+                            <h4 class="card-title">But Why..?</h4>
+                            <p class="card-text">Literaly for no reason. :D I just love programming. I just wanted
+                                to integrate the idea of creating an  entire fake account including a passport sized copyright free image.
+                            </p>
+                            <h4 class="card-title">Dark Mode</h4>
+                            <p class="card-text">Yoo..<q><i>I am literally a fan of DarkMode</i></q>:Dude just joking<br>
 
-
+                            I just wanted to learn how to integrate DarkMode into a webstie.So just to learn all those stuff I planned to implement
+                            the dark mode. 
+                            </p>
+                    </div>
+                </div>
+            </div> 
+            </div>
 
 
         </div>
@@ -56,7 +96,9 @@ var flag_session= localStorage.getItem("flag");
 	$('#head_color').css('color','white')
 	$('#head_color1').css('color','white')
 	$('#head_color2').css('color','white')
-	$('#head_color3').css('color','white')
+    $('#head_color3').css('color','white')
+    $('.card').removeClass('border-dark ')
+    $('.card').addClass('border-light ')
 }
 
 </script>
