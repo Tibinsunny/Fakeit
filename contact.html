@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Let's Fake Everything</title>
+</head>
+<style>
+     @media only screen and (min-width: 992px)
+    {
+        .card
+        {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+    }
+    	html,body{
+			height: 100%;
+		}
+       .container{
+       	height: 100%;
+       	align-content: center;
+       }
+
+       .image_outer_container{
+       	margin-top: auto;
+       	margin-bottom: auto;
+       	border-radius: 50%;
+       	position: relative;
+       }
+
+       .image_inner_container{
+       	border-radius: 50%;
+       	padding: 5px;
+        background: #833ab4; 
+        background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); 
+        background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+       }
+       .image_inner_container img{
+       	height: 200px;
+       	width: 200px;
+       	border-radius: 50%;
+       	border: 5px solid white;
+       }
+
+       .image_outer_container .green_icon{
+         background-color: #4cd137;
+         position: absolute;
+         right: 30px;
+         bottom: 10px;
+         height: 30px;
+         width: 30px;
+         border:5px solid white;
+         border-radius: 50%;
+       }</style>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light  bg-lightnew">
+            <a class="navbar-brand" href="/"><font id="head_color" color=black>FakeTheWorld</font></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/"><font id="head_color1" color=black>Home</font> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><font id="head_color2" color=black>About Site</a></font>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><font id="head_color3" color=black>Contact</a></font>
+                    </li>
+               
+                </ul>
+             
+            </div>
+        </nav>
+        <div class="col-xs-1 text-center mt-5">
+            
+                <div class="card ">
+                  <div class="card-body">
+              
+            <div class="d-flex justify-content-center h-100">
+                <div class="image_outer_container">
+                    <div class="green_icon"></div>
+                    <div class="image_inner_container">
+                        <img src="https://avatars1.githubusercontent.com/u/33937416?s=460&u=4a9adc5d9deeafa693025a812ba9f53cf52c9bfe&v=4">
+                    </div>
+                </div>
+               
+            </div>
+            Hey guys,<br>My name is Tibin Sunny.I am the one who developed this creepy website.I am a passionate Developer and A security reasearcher. Basically i love creating and breaking things :) <br>
+            Catch me up :<br><br> <a href=https://github.com/tibinsunny  target="_blank" >GitHub</a><a class="pl-2" href=https://facebook.com/tibinsunny95  target="_blank" >Facebook</a><a class="pl-2" href=https://instagram.com/tibinsunny95  target="_blank"> Instagram</a><a class="pl-2" href=tibinsunny95@gmail.com  target="_blank">G-Mail</a>
+            <br><br>
+        </div>
+</body>
+                  </div>
+               
+         
+        
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+var flag_session= localStorage.getItem("flag");
+
+    if(flag_session==1)
+{
+	$('body').css('background-color','#343a40')
+	$('.bg-lightnew').css('background-color','#343a40')
+	$('.card').addClass('bg-dark')
+	$('.card').css('color','white')
+	$('mode').html('<font color=white>Toggle WhiteMode</font>')
+	$('#head_color').css('color','white')
+	$('#head_color1').css('color','white')
+	$('#head_color2').css('color','white')
+    $('#head_color3').css('color','white')
+    $('.card').removeClass('border-dark ')
+    $('.card').addClass('border-light ')
+}
+
+</script>
+</html>
