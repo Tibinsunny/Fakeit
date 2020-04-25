@@ -10,4 +10,4 @@ This is the normal desktop interface of the website  :)
 
 # Dark Mode
 
-![alt text](https://github.com/Tibinsunny/fakeit/blob/master/screenshots/Screenshot1.PNG)
+![alt text](https://github.com/Tibinsunny/fakeit/blob/master/screenshots/screenshot1.PNG)
