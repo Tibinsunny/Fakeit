@@ -229,6 +229,18 @@ $.getJSON('https://randomuser.me/api/?format=json', function(data){
 	$("#radom_mail").text(radom_mail)
 	$("#radom_phone").text(radom_phone)
 })
+$.getJSON('/relation.json',function(data){
+
+var father_name=data.male[Math.floor(Math.random() * data.male.length)];
+var father_name_sur=data.male[Math.floor(Math.random() * data.male.length)];
+var mother_name=data.female[Math.floor(Math.random() * data.female.length)];
+var friend_name=data.female[Math.floor(Math.random() * data.female.length)];
+$("#father_name").text("Father: ".concat(father_name).concat(" ").concat(father_name_sur))
+$("#mother_name").text("Mother: ".concat(mother_name).concat(" ").concat(father_name))
+$("#friend_name").text("Friend: ".concat(friend_name))
+
+}
+)
 
 function reload()
 {
