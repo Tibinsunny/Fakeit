@@ -229,7 +229,7 @@ $.getJSON('https://randomuser.me/api/?format=json', function(data){
 	$("#radom_mail").text(radom_mail)
 	$("#radom_phone").text(radom_phone)
 })
-$.getJSON('/relation.json',function(data){
+$.getJSON('relation.json',function(data){
 
 var father_name=data.male[Math.floor(Math.random() * data.male.length)];
 var father_name_sur=data.male[Math.floor(Math.random() * data.male.length)];
