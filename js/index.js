@@ -208,7 +208,7 @@ var selector=Math.floor(Math.random() * 101);
 var selector2=Math.floor(Math.random() * 101);
 $("#first_name").text(names[selector].concat(" ").concat(names[selector2]))
 var chooser=Math.floor(Math.random()*1000);
-$.getJSON('address.json', function(data){
+$.getJSON('json/address.json', function(data){
    
 var address=data.addresses[chooser].address1;
 var city=data.addresses[chooser].city;
@@ -229,7 +229,7 @@ $.getJSON('https://randomuser.me/api/?format=json', function(data){
 	$("#radom_mail").text(radom_mail)
 	$("#radom_phone").text(radom_phone)
 })
-$.getJSON('relation.json',function(data){
+$.getJSON('json/relation.json',function(data){
 
 var father_name=data.male[Math.floor(Math.random() * data.male.length)];
 var father_name_sur=data.male[Math.floor(Math.random() * data.male.length)];
