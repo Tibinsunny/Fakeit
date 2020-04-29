@@ -4,10 +4,10 @@ This is an attempt to create a site which provides fake personal information inc
 # Normal Mode
 This is the normal desktop interface of the website  :)
 
-![alt text](https://github.com/Tibinsunny/fakeit/blob/master/screenshots/Screenshot.PNG)
+![alt text](https://github.com/Tibinsunny/fakeit/blob/master/screenshots/newss.PNG)
 
 
 
 # Dark Mode
 
-![alt text](https://github.com/Tibinsunny/fakeit/blob/master/screenshots/screenshot1.PNG)
+![alt text](https://github.com/Tibinsunny/fakeit/blob/master/screenshots/newss2.PNG)
