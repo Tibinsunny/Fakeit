@@ -260,6 +260,7 @@ function modechanger()
 	$('#head_color1').css('color','white')
 	$('#head_color2').css('color','white')
 	$('#head_color3').css('color','white')
+	$('#Visit_maker').css('color','white')
 	localStorage.setItem("flag", "1");
 	flag=1
 }else
@@ -273,6 +274,7 @@ function modechanger()
 	$('#head_color1').css('color','black')
 	$('#head_color2').css('color','black')
 	$('#head_color3').css('color','black')
+	$('#Visit_maker').css('color','black')
 	localStorage.setItem("flag", "0");
 	flag=0
 }
